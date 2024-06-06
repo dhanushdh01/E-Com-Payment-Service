@@ -7,7 +7,6 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Currency;
 import java.util.UUID;
 @Getter
 @Setter
@@ -17,6 +16,8 @@ public class Payment extends BaseModel{
     private UUID userId;
     private UUID orderId;
     private String transactionId;
+    private String paymentLink;
+    private PaymentGatwayType paymentGatwayType;
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
     @OneToOne
